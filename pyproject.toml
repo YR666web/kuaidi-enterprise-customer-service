@@ -1,12 +1,12 @@
 [project]
-name = "project"
+name = "kuaidi-enterprise-customer-service"
 version = "0.1.0"
-description = "Add your description here"
+description = "快递企业智能客服"
 requires-python = ">=3.12"
 dependencies = []
 
 [project.scripts]
-project = "project:main"
+kuaidi-enterprise-customer-service = "project:main"
 
 [build-system]
 requires = ["uv_build>=0.12.16,<0.13.0"]
