@@ -1,0 +1,121 @@
+// ============================================================
+// 设计令牌（design tokens）
+// 色彩 / 字体 / 间距 / 圆角 / 阴影统一为 CSS 变量
+// 亮色：:root；暗色：html[data-theme='dark']
+// Element Plus 通过 --el-* 变量同步
+// ============================================================
+
+:root {
+  // —— 品牌色 ——
+  --sl-primary: #4f6ef2;
+  --sl-primary-hover: #6b86f5;
+  --sl-primary-active: #3d56c9;
+  --sl-primary-soft: rgba(79, 110, 242, 0.12);
+
+  // —— 中性色 ——
+  --sl-gray-50: #f7f8fa;
+  --sl-gray-100: #eef0f4;
+  --sl-gray-200: #e2e5eb;
+  --sl-gray-300: #cfd4dd;
+  --sl-gray-400: #9aa2b1;
+  --sl-gray-500: #6b7280;
+  --sl-gray-600: #4b5563;
+  --sl-gray-700: #374151;
+  --sl-gray-800: #1f2937;
+  --sl-gray-900: #111827;
+
+  // —— 语义色 ——
+  --sl-success: #16a34a;
+  --sl-warning: #d97706;
+  --sl-danger: #dc2626;
+  --sl-info: #0284c7;
+
+  // —— 语义化映射（亮色）——
+  --sl-bg-page: var(--sl-gray-50);
+  --sl-bg-surface: #ffffff;
+  --sl-bg-elevated: #ffffff;
+  --sl-bg-subtle: var(--sl-gray-100);
+  --sl-text-primary: var(--sl-gray-900);
+  --sl-text-regular: var(--sl-gray-700);
+  --sl-text-secondary: var(--sl-gray-500);
+  --sl-text-placeholder: var(--sl-gray-400);
+  --sl-text-disabled: var(--sl-gray-300);
+  --sl-border: var(--sl-gray-200);
+  --sl-border-light: var(--sl-gray-100);
+  --sl-border-dark: var(--sl-gray-300);
+
+  // —— 字体 ——
+  --sl-font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --sl-font-size-xs: 12px;
+  --sl-font-size-sm: 13px;
+  --sl-font-size-md: 14px;
+  --sl-font-size-lg: 16px;
+  --sl-font-size-xl: 20px;
+  --sl-font-size-2xl: 24px;
+  --sl-font-weight-regular: 400;
+  --sl-font-weight-medium: 500;
+  --sl-font-weight-semibold: 600;
+  --sl-line-height: 1.6;
+
+  // —— 间距（4px 基准）——
+  --sl-space-xs: 4px;
+  --sl-space-sm: 8px;
+  --sl-space-md: 16px;
+  --sl-space-lg: 24px;
+  --sl-space-xl: 32px;
+  --sl-space-2xl: 48px;
+
+  // —— 圆角 ——
+  --sl-radius-sm: 4px;
+  --sl-radius-md: 8px;
+  --sl-radius-lg: 12px;
+  --sl-radius-full: 9999px;
+
+  // —— 阴影 ——
+  --sl-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --sl-shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+  --sl-shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.14);
+
+  // —— Element Plus 同步 ——
+  --el-color-primary: var(--sl-primary);
+  --el-color-primary-light-3: var(--sl-primary-hover);
+  --el-color-primary-dark-2: var(--sl-primary-active);
+  --el-color-success: var(--sl-success);
+  --el-color-warning: var(--sl-warning);
+  --el-color-danger: var(--sl-danger);
+  --el-color-info: var(--sl-info);
+  --el-border-radius-base: var(--sl-radius-md);
+  --el-font-family: var(--sl-font-family);
+}
+
+// 暗色主题
+html[data-theme='dark'] {
+  --sl-gray-50: #171c24;
+  --sl-gray-100: #1f2630;
+  --sl-gray-200: #2a333f;
+  --sl-gray-300: #3a4654;
+  --sl-gray-400: #6b7684;
+  --sl-gray-500: #909aa8;
+  --sl-gray-600: #b0b9c5;
+  --sl-gray-700: #cdd5df;
+  --sl-gray-800: #e2e7ee;
+  --sl-gray-900: #f3f5f8;
+
+  --sl-bg-page: #0e1218;
+  --sl-bg-surface: #171c24;
+  --sl-bg-elevated: #1f2630;
+  --sl-bg-subtle: #1f2630;
+  --sl-text-primary: #f3f5f8;
+  --sl-text-regular: #cdd5df;
+  --sl-text-secondary: #909aa8;
+  --sl-text-placeholder: #6b7684;
+  --sl-text-disabled: #3a4654;
+  --sl-border: #2a333f;
+  --sl-border-light: #1f2630;
+  --sl-border-dark: #3a4654;
+
+  --sl-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --sl-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --sl-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+}

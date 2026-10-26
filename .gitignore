@@ -1,0 +1,40 @@
+# 依赖与构建产物（子目录已有更细粒度 .gitignore）
+node_modules/
+.venv/
+.venv-broken-backup/
+__pycache__/
+dist/
+.ruff_cache/
+.uv-cache/
+.pytest_cache/
+.pytest-tmp/
+docx_render/
+full_qa_render/
+
+# 运行时数据（data/flows 为流程配置，需入库；仅忽略 Chroma 持久化目录）
+*.db
+data/chroma/
+
+# 本地模型缓存（体积大，不入库；按需重新下载）
+models/
+
+# 环境变量（含密钥）
+.env
+*.local
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store
+
+# 仅保留在本地的项目资料
+栈语-学习指南.md
+栈语-开发步骤文档.md
+栈语-技术设计文档（TDD）.md
+栈语-需求规格说明书（PRD）.md
+栈语-面试项目经历与问答.md
+栈语项目_AI应用开发实习全流程面试题库与参考回答.docx
+栈语项目_AI应用开发实习面试手册.docx
+项目总结提示词.md
+栈语你要做的事/
+Project.zip

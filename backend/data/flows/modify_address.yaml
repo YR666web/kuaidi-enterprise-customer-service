@@ -1,0 +1,29 @@
+id: modify_address
+name: 修改收货地址
+triggers: [改地址, 修改地址, 换地址, 改收货地址]
+steps:
+  - id: ask_name
+    type: collect
+    slot: receiver_name
+    prompt: 请提供收货人姓名
+    validate: name
+    aliases: [姓名, 收货人, 收货人姓名]
+  - id: ask_phone
+    type: collect
+    slot: receiver_phone
+    prompt: 请提供收货人手机号
+    validate: phone
+    aliases: [手机号, 电话, 手机, 收货人电话]
+  - id: ask_address
+    type: collect
+    slot: receiver_address
+    prompt: 请提供详细收货地址
+    validate: address
+    aliases: [地址, 收货地址, 详细地址]
+  - id: set_channel
+    type: set_slot
+    slot: channel
+    value: app
+  - id: submit
+    type: action
+    action: submit_address

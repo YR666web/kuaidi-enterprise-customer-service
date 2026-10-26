@@ -1,0 +1,96 @@
+@use './tokens';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--sl-font-family);
+  font-size: var(--sl-font-size-md);
+  color: var(--sl-text-primary);
+  background: var(--sl-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: var(--sl-primary);
+  text-decoration: none;
+}
+
+// 滚动条美化
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sl-border-dark);
+  border-radius: var(--sl-radius-full);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+// 通用工具类
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+  min-width: 0;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.text-secondary {
+  color: var(--sl-text-secondary);
+}
+.text-sm {
+  font-size: var(--sl-font-size-sm);
+}
+.text-xs {
+  font-size: var(--sl-font-size-xs);
+}
+.mono {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 页面通用过渡
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// Element Plus 细节修正
+.el-card {
+  border-radius: var(--sl-radius-lg);
+  border: 1px solid var(--sl-border);
+  box-shadow: var(--sl-shadow-sm);
+}
+.el-table {
+  --el-table-border-color: var(--sl-border-light);
+}
+.el-tag {
+  font-weight: var(--sl-font-weight-medium);
+}

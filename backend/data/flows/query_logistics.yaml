@@ -1,0 +1,11 @@
+id: query_logistics
+name: 查询物流
+triggers: [查快递, 查物流, 快递单号, 快递, 物流, 运单, 包裹]
+steps:
+  - id: ask_no
+    type: collect
+    slot: tracking_no
+    prompt: 请提供快递单号
+  - id: query
+    type: action
+    action: query_logistics

@@ -1,0 +1,29 @@
+id: return_goods
+name: 退货
+triggers: [退货, 退款, 我要退货, 我要退款]
+steps:
+  - id: ask_reason
+    type: collect
+    slot: reason
+    prompt: 请说明退货原因
+  - id: ask_type
+    type: collect
+    slot: goods_type
+    prompt: 请提供商品类型（生鲜/普通）
+  - id: branch
+    type: condition
+    condition: goods_type == 生鲜
+    then: fresh_handler
+    else: normal_handler
+  - id: fresh_handler
+    type: action
+    action: handle_fresh_return
+  - id: jump_done
+    type: link
+    target: done
+  - id: normal_handler
+    type: action
+    action: handle_normal_return
+  - id: done
+    type: action
+    action: submit_return
